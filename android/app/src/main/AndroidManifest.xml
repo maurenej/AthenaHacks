@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.su.athenahacks">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Edison Home"
+        android:supportsRtl="true">
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Splash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Door"
+            android:label="Configure Door"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Display"
+            android:label="Configure Display"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Light"
+            android:label="Configure Lights"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Sound"
+            android:label="Configure Sound"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Manual"
+            android:label="Manual"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>
