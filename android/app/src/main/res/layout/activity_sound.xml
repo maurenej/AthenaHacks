@@ -19,18 +19,19 @@
         android:layout_alignParentTop="true"
         android:layout_height="180dp">
             <RadioButton
-                android:text="Sound 1"
+                android:text="Alarm"
                 android:id="@+id/SOUND_1"
                 android:textSize="18sp"
                 android:textColor="#ffaaaf"
                 android:buttonTint="#ffaaaaff"
                 android:textStyle="normal|bold"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="30dp"
+                android:layout_width="100dp"
+                android:textAllCaps="false" />
 
             <RadioButton
                 android:text="Sound 2"

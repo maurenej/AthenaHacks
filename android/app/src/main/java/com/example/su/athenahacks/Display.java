@@ -9,7 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Display extends AppCompatActivity {
-    EditText redVal, greenVal, blueVal;
+    EditText redVal, greenVal, blueVal, tempUnit;
     Button submit, temp, time;
     TextView response;
     Boolean isOnTemp = false, isOnTime = false;
@@ -26,6 +26,7 @@ public class Display extends AppCompatActivity {
         response = (TextView)findViewById(R.id.response);
         temp = (Button)findViewById(R.id.tempButton);
         time = (Button)findViewById(R.id.timeButton);
+        tempUnit = (EditText)findViewById(R.id.tempUnit);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +55,18 @@ public class Display extends AppCompatActivity {
                 if(!isOnTemp){
                     isOnTemp = true;
                     temp.setText("HIDE TEMP");
-                    Client myClient = new Client("207.151.58.166", 5001, "TEMP_F", response);
-                    myClient.execute();
+                    if(tempUnit.getText().toString().equals("F")) {
+                        Client myClient = new Client("207.151.58.166", 5001, "TEMP_F", response);
+                        myClient.execute();
+                    }
+                    else if (tempUnit.getText().toString().equals("C")){
+                        Client myClient = new Client("207.151.58.166", 5001, "TEMP_C", response);
+                        myClient.execute();
+                    }
+                    else{
+                        Toast notification = Toast.makeText(getApplicationContext(), "You must set a unit of measure! Look to the manual on the home page for help.", Toast.LENGTH_LONG);
+                        notification.show();
+                    }
                 }
                 else{
                     isOnTemp = false;
@@ -83,5 +94,7 @@ public class Display extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }

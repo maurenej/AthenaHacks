@@ -21,15 +21,15 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Dream House"
+        android:text="Ohm Sweet Ohm "
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:id="@+id/title"
-        android:fontFamily="cursive"
-        android:textSize="36sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="30sp"
         android:textColor="#aaaaff"
         android:textStyle="normal|bold" />
 </RelativeLayout>

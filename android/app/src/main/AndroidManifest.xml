@@ -13,7 +13,8 @@
         <uses-permission android:name="android.permission.BLUETOOTH" />
         <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,29 +22,35 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".Splash"
+        <activity
+            android:name=".Splash"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".Door"
-            android:theme="@style/AppTheme"
-            android:label="Configure Door" />
+            android:label="Configure Door"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Display"
-            android:theme="@style/AppTheme"
-            android:label="Configure Display" />
+            android:label="Configure Display"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Light"
-            android:theme="@style/AppTheme"
-            android:label="Configure Lights" />
+            android:label="Configure Lights"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Sound"
-            android:theme="@style/AppTheme"
-            android:label="Configure Sound" />
+            android:label="Configure Sound"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Manual"
+            android:label="Manual"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

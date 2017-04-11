@@ -13,39 +13,6 @@
     tools:context="com.example.su.athenahacks.MainActivity"
     android:textAlignment="gravity">
 
-    <ImageView
-        android:layout_width="400dp"
-        android:id="@+id/ribbon"
-        android:background="#ffaaaaff"
-        android:layout_marginBottom="39dp"
-        android:layout_height="15dp"
-        android:layout_alignBottom="@+id/instruction"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        app:srcCompat="@drawable/pinkcloud"
-        android:id="@+id/pink_cloud"
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_marginBottom="32dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Choose on a feature to learn how it works!"
-        android:id="@+id/instruction"
-        android:textAlignment="center"
-        android:gravity="center_vertical"
-        android:fontFamily="sans-serif"
-        android:textSize="18sp"
-        android:layout_height="100dp"
-        android:layout_width="200dp"
-        android:textColor="#FFFFFF"
-        android:layout_alignTop="@+id/pink_cloud"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp" />
-
     <Button
         android:text="Door"
         android:layout_width="100dp"
@@ -134,5 +101,49 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:id="@+id/ribbon"
+        android:background="#ffaaaaff"
+        android:layout_height="15dp"
+        android:layout_above="@+id/manual"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="36dp" />
+
+    <ImageView
+        app:srcCompat="@drawable/pinkcloud"
+        android:id="@+id/pink_cloud"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="32dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Choose  a feature to learn how it works!"
+        android:id="@+id/instruction"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:textColor="#FFFFFF"
+        android:layout_alignTop="@+id/pink_cloud"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:text="MANUAL"
+        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_below="@+id/instruction"
+        android:layout_alignLeft="@+id/door"
+        android:layout_alignStart="@+id/door"
+        android:background="#80D8FF"
+        android:textColor="#FFFFFF"
+        android:id="@+id/manual" />
 
 </RelativeLayout>

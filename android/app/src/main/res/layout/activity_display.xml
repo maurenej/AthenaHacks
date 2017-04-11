@@ -26,70 +26,6 @@
         android:layout_height="40dp"
         android:textColor="#FFFFFF" />
 
-    <EditText
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/green_val"
-        android:layout_below="@+id/red_val"
-        android:layout_alignLeft="@+id/changeColors"
-        android:layout_alignStart="@+id/changeColors"
-        android:layout_marginStart="33dp"
-        android:background="#F5F5F5"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark" />
-
-    <EditText
-        android:layout_width="100dp"
-        android:inputType="number"
-        android:layout_marginTop="65dp"
-        android:id="@+id/red_val"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/green_val"
-        android:layout_alignStart="@+id/green_val"
-        android:layout_height="40dp"
-        android:background="#FFF3E0"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimaryDark" />
-
-    <TextView
-        android:text="RED: #"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/redView"
-        android:textSize="30sp"
-        android:layout_alignTop="@+id/red_val"
-        android:layout_alignRight="@+id/greenView"
-        android:layout_alignEnd="@+id/greenView"
-        android:gravity="center"
-        android:textColor="#ffaaaf" />
-
-    <TextView
-        android:text="BLUE: #"
-        android:layout_height="wrap_content"
-        android:id="@+id/blueView"
-        android:textSize="30sp"
-        android:layout_width="150dp"
-        android:gravity="center"
-        android:layout_below="@+id/green_val"
-        android:layout_toLeftOf="@+id/blue_val"
-        android:layout_toStartOf="@+id/blue_val"
-        android:textColor="#ffaaaf" />
-
-    <TextView
-        android:text="GREEN: #"
-        android:layout_height="wrap_content"
-        android:id="@+id/greenView"
-        android:textSize="30sp"
-        android:layout_width="150dp"
-        android:gravity="center"
-        android:layout_alignBaseline="@+id/green_val"
-        android:layout_alignBottom="@+id/green_val"
-        android:layout_toLeftOf="@+id/red_val"
-        android:layout_toStartOf="@+id/red_val"
-        android:textColor="#ffaaaf" />
-
     <Button
         android:text="submit"
         android:layout_width="wrap_content"
@@ -135,7 +71,7 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Enter values between 000-250 to mix colors and change the LED display!"
+        android:text="Enter values between 000-250 (the exact format) to mix colors and change the LED display!"
         android:layout_height="wrap_content"
         android:id="@+id/instruct"
         android:textSize="16sp"
@@ -171,5 +107,98 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="GREEN: #"
+        android:layout_height="wrap_content"
+        android:id="@+id/greenView"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="#ffaaaf"
+        android:layout_alignBaseline="@+id/green_val"
+        android:layout_alignBottom="@+id/green_val"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="100dp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="BLUE: #"
+        android:layout_height="wrap_content"
+        android:id="@+id/blueView"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="#ffaaaf"
+        android:layout_below="@+id/green_val"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="100dp"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:inputType="number"
+        android:layout_marginTop="25dp"
+        android:id="@+id/red_val"
+        android:layout_height="40dp"
+        android:background="#FFF3E0"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/tempButton"
+        android:layout_alignRight="@+id/changeColors"
+        android:layout_alignEnd="@+id/changeColors" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/green_val"
+        android:background="#F5F5F5"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@+id/red_val"
+        android:layout_alignLeft="@+id/red_val"
+        android:layout_alignStart="@+id/red_val" />
+
+    <TextView
+        android:text="RED: #"
+        android:layout_height="wrap_content"
+        android:id="@+id/redView"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="#ffaaaf"
+        android:layout_width="100dp"
+        android:layout_alignBaseline="@+id/red_val"
+        android:layout_alignBottom="@+id/red_val"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:inputType="textCapCharacters|textPersonName"
+        android:id="@+id/tempUnit"
+        android:autoText="true"
+        android:background="#FFF3E0"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignTop="@+id/greenView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/tempUnit"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="#ffaaaf"
+        android:layout_width="100dp"
+        android:text="Temperature Unit"
+        android:textStyle="normal|bold"
+        android:layout_alignTop="@+id/redView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

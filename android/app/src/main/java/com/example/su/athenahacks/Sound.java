@@ -35,7 +35,7 @@ public class Sound extends AppCompatActivity {
             public void onClick(View v) {
 
                 if (sound1.isChecked()){
-                    command = "SOUND_1";
+                    command = "ALARM";
                     isSelected = true;
                 }
                 else if (sound2.isChecked()){

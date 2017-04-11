@@ -21,19 +21,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:text="TURN ON"
-        android:id="@+id/on_off"
-        android:layout_height="50dp"
-        android:background="#ffaaaf"
-        android:textColor="#FFFFFF"
-        android:fontFamily="sans-serif-medium"
-        android:layout_width="150dp"
-        android:textSize="18sp"
-        android:layout_below="@+id/bulb"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="21dp" />
-
     <TextView
         android:id="@+id/response"
         android:text=". . status . ."
@@ -81,5 +68,31 @@
         android:layout_alignBottom="@+id/pink_cloud"
         android:layout_alignLeft="@+id/bulb"
         android:layout_alignStart="@+id/bulb" />
+
+    <Button
+        android:text="TURN ON"
+        android:id="@+id/on_off"
+        android:layout_height="50dp"
+        android:background="#ffaaaf"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="150dp"
+        android:textSize="18sp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/bulb"
+        android:layout_alignLeft="@+id/pink_cloud"
+        android:layout_alignStart="@+id/pink_cloud" />
+
+    <Button
+        android:text="Auto On"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/AutoonButton"
+        android:textSize="18sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#FFFFFF"
+        android:layout_above="@+id/response"
+        android:layout_toRightOf="@+id/on_off"
+        android:layout_toEndOf="@+id/on_off" />
 
 </RelativeLayout>

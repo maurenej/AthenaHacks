@@ -11,11 +11,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class Light extends AppCompatActivity {
-    Button lightswitch;
+    Button lightswitch, autoon;
     TextView response;
     ImageView bulb;
 
-    Boolean isOn = false;
+    Boolean isLightOn = false, isAutoOn = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,26 +24,46 @@ public class Light extends AppCompatActivity {
         lightswitch = (Button)findViewById(R.id.on_off);
         response = (TextView)findViewById(R.id.response);
         bulb = (ImageView)findViewById(R.id.bulb);
+        autoon = (Button)findViewById(R.id.AutoonButton);
 
         lightswitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!isOn) {
+                if (!isLightOn) {
                     Client myClient = new Client("207.151.58.166", 5001, "LIGHT_ON", response);
                     myClient.execute();
                     bulb.setImageResource(R.drawable.onbulb);
                     lightswitch.setText("turn off");
-                    isOn = true;
+                    isLightOn = true;
                 }
                 else {
                     Client myClient = new Client("207.151.58.166", 5001, "LIGHT_OFF", response);
                     myClient.execute();
                     bulb.setImageResource(R.drawable.offbulb);
                     lightswitch.setText("turn on");
-                    isOn = false;
+                    isLightOn = false;
                 }
             }
         });
+
+        autoon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!isLightOn) {
+                    Client myClient = new Client("207.151.58.166", 5001, "AUTO_ON", response);
+                    myClient.execute();
+                    autoon.setText("Auto off");
+                    isAutoOn = true;
+                }
+                else {
+                    Client myClient = new Client("207.151.58.166", 5001, "AUTO_OFF", response);
+                    myClient.execute();
+                    autoon.setText("Auto on");
+                    isAutoOn = false;
+                }
+            }
+        });
+
 
     }
 }

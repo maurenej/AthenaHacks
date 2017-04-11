@@ -1,6 +1,7 @@
 package com.example.su.athenahacks;
 
 import android.os.AsyncTask;
+import android.util.Log;
 import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
@@ -9,6 +10,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
 
 public class Client extends AsyncTask<Object, Object, String> {
 
@@ -41,10 +43,13 @@ public class Client extends AsyncTask<Object, Object, String> {
             OutputStream output = socket.getOutputStream();
 
             output.write(dstMessage.getBytes());
-            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                byteArrayOutputStream.write(buffer, 0, bytesRead);
-                response += byteArrayOutputStream.toString("UTF-8");
-            }
+            Log.i("Info", "Sent");
+            String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new java.util.Date());
+            response ="Received by the server + " + timeStamp;
+//          while ((bytesRead = inputStream.read(buffer)) != -1) {
+//                byteArrayOutputStream.write(buffer, 0, bytesRead);
+//                response += byteArrayOutputStream.toString("UTF-8");
+//            }
 
         } catch (UnknownHostException e) {
             // TODO Auto-generated catch block
